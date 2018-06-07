@@ -35,7 +35,16 @@ option(FMT_INSTALL "Generate the install target." ${MASTER_PROJECT})
 option(FMT_TEST "Generate the test target." ${MASTER_PROJECT})
 option(FMT_USE_CPP14 "Enable the addition of C++14 compiler flags." ON)
 
-project(FMT)
+project(fmt)
+
+# catkin support
+find_package(catkin REQUIRED)
+catkin_package(
+  INCLUDE_DIRS include
+  LIBRARIES fmt
+#  CATKIN_DEPENDS other_catkin_pkg
+#  DEPENDS system_lib
+)
 
 # Get version from core.h
 file(READ include/fmt/core.h core_h)
