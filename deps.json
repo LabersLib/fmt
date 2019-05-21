@@ -1,5 +1,5 @@
 {
-    "repo": "DacnerDeps/fmt",
+    "repo": "ZJLab/fmt",
     "name": "fmt",
     "workspace": "lib",
     "build": [],
